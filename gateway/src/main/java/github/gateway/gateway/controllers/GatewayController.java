@@ -21,11 +21,11 @@ public class GatewayController {
         this.repo = repo;
     }
 
-    @GetMapping("/users/{user}")
-    public ResponseEntity<UserWithReposDto> getUser(@PathVariable String user) throws IOException, InterruptedException {
+    @GetMapping("/users/{username}")
+    public ResponseEntity<UserWithReposDto> getUser(@PathVariable String username) throws IOException, InterruptedException {
         UserWithReposDto response;
         try {
-            response = repo.GetUserWithRepos(user);
+            response = repo.GetUserWithRepos(username);
         } catch (Exception e) {
             String message = e.getMessage();
             if(message != null && message.contains("Not Found")){
