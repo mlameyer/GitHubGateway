@@ -16,5 +16,15 @@ There are a few areas for improvement.
 5. I would add authorization and authentication to the api. Since this is an api that I am exposing outside of the company's firewall. It would be best practice.
 6. I would add additional unit tests to cover my mapper and my pojos. I believe that all code should have coverage as long as it is reasonable. Example when not to is if there is one or two lines of code that would take a sizable amount of time and complexity to mock or setup test data around it even though the rest of the code is covered. I would look at it more holistically. Such as am I covering all the potential use cases within the class and not just one or two lines contained in the class.
 
-## How To
-Download the 
+## How To build and run
+1. From intellij ide or eclipse
+   - run from the ide src/main/java/github/gateway/gateway/GatewayApplication.java
+2. Build using maven and run jar file on local machine
+   - run mvn clean
+   - run mvn compile
+   - run mvn package
+   - navigate to local folder where maven creates the jar file
+   - execute using cmd java -jar gateway-0.0.1-SNAPSHOT.jar
+3. Use either postman or open a webrowser of choice and paste in the url http://localhost:8080/users/octocat Should get back payload and 200 response
+4. Try using your own github username Should get back payload and 200 response
+5. Try using http://localhost:8080/users/qewrter Should get back no payload and a 404 response
