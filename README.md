@@ -1,5 +1,4 @@
 # GitHubGateway
- BranchApp Demo
 
 ## Overview
 Starting from a high level I chose to treat this api as a gateway api. I am imagining there is a larger system or service that is internal to the comapny and we want to have an individual api that is responsible for the direct interaction with the third party service. In this case, Github. The gateway allows us to separate any complexity we need to deal with when interacting with the third party's api. An Example might be security. We don't want our internal service exposed outside of our firewall and other protections. So implementing a gatway api can limit exposure.
